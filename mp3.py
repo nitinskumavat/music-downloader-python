@@ -30,13 +30,12 @@ soup2 = BeautifulSoup(d_page,'html.parser')
 
 download_links=()
 download_links=soup2.select("a[href*=downloads]")#select links that contains download keyword
-for links in download_links:
-    print(links['href'])
+
 
 name = download_links[0]['href'].replace("%20"," ").split('/')[-1]#getting name for downloaded song
 print(name)
 #download file form second link
 link=download_links[0]['href']
-location='songs\\'+name
+location='songs\\'+name #will download the song in songs folder
 urllib.request.urlretrieve(link,location)
 

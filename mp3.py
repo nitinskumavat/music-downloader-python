@@ -85,6 +85,10 @@ def download(download_links):
     urllib.request.urlretrieve(link,location)
     print("Download complete!\n")
     
-   
+ 
+
 if __name__=='__main__':
     song_name()
+    
+    
+#Just for educational purpose use at your own risk!
